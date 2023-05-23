@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOK-WORK-SHOP</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <ul class="list">
+            <li>
+                <a class="list-item" href="#">Home</a>
+            </li>
+            <li>
+                <a class="list-item" href="#">About us</a>
+            </li>
+            <li>
+                <a class="list-item" href="#">Products</a>
+            </li>
+            <li>
+                <a class="list-item" href="#">Reviews</a>
+            </li>
+            <li>
+                <a class="list-item" href="#">Contact</a>
+            </li>
+            <li>
+                <a class="list-item-text">BOOK-WORK-SHOP</a>
+            </li> 
+        </ul>
+    </nav>
+    <section class="hero">
+        <div class="hero-text-box">
+            <h1 class="main">BOOK-WORK-SHOP</h1>
+            <p class="sub-main">With us you can <b>buy</b> the book, <b>read</b> it, <b>create</b> it...</p>
+            <button class="hero-btn" href="#">CONTACT US</button>
+            <button class="hero-btn" href="#">WHAT WE OFFER</button>
+        </div>
+    </section>
+    <section class="about-us">
+        <div class="about-us-title">
+            <h2>About BOOK-WORK-SHOP</h2>
+        </div>
+        <div class="about-us-container">
+            <div class="about-us-text">
+                <p>What is the <b>BOOK-WORK-SHOP?</b> <br> A bookstore? <br> A reading room? A writing or bookbinding workshop? <br> Or an original-looking coffe shop?
+                <br> <b>All of the above and even more.</b> <br><br> BOOK-WORK-SHOP is a place with a unique atmosphere, created by book lovers for book lovers. It is
+                also a community, fascinated by reading and creating. <br><br> Dear visitor, come inside, take a look around and fall in love with a "bookstore"
+                you haven't seen before!
+                </p>
+            </div>
+            <div class="about-us-img">
+                <img src="./assets/img/window.jpg" width="950">
+            </div>
+        </div>
+        <div class="about-us-container">
+            <div class="about-us-img">
+                <img src="./assets/img/floating.jpg" width="950">
+            </div>
+            <div class="about-us-text">
+                <p>Are you curious about how a book is made? Would you like to try your hand at writing or learn the art of bookbinding? <br><br> Take advantage of our workshops
+                - create a captivating novel or a moving poetry, bind it <b>immortalize your own creation!</b>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="products">
+        <div class="products-title">
+            <h2>What we offer?</h2>
+        </div>
+        <div class="products-container">
+            <div class="slideshow">
+                <img class="slides" src="./assets/img/sign.jpg" width="95%">
+                <img class="slides" src="./assets/img/local.jpg" width="95%">
+                <img class="slides" src="./assets/img/coffe.jpg" width="95%">
+                <img class="slides" src="./assets/img/writing.jpg" width="95%">
+                <img class="slides" src="./assets/img/bind.jpg" width="95%">
+                <img class="slides" src="./assets/img/spider.jpg" width="95%">
+                <button class="slideshow-btn slideshow-black slideshow-display-left" onclick="plusDivs(-1)">&#10094</button>
+                <button class="slideshow-btn slideshow-black slideshow-display-right" onclick="plusDivs(1)">&#10095</button>
+            </div>
+    
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
+
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("slides");
+                    if (n > x.lenght) {slideIndex = 1}
+                    if (n < 1) {slideIndex = x.lenght}
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    x[slideIndex-1].style.display = "block";
+                }
+            </script>
+            <ol class="products-list">
+                <li class="pr-list-item1">Books! What more do we need?</li>
+                <br>
+                <li class="pr-list-item2">The wonderful atmosphere of the intimate reading room</li>
+                <br>
+                <li class="pr-list-item3">A cup of delicious, aromatic coffee? Of course!</li>
+                <br>
+                <li class="pr-list-item4">Writing workshop, because everyone has a story to write</li>
+                <br>
+                <li class="pr-list-item5">Bookbinding workshop, because every story deserves a proper binding</li>
+                <br>
+                <li class="pr-list-item6">Above all, adventure!</li>
+            </ol>
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="reviews-title">
+            <h2>Reviews - some of the opinions</h2>
+        </div>
+        <div class="reviews-container">
+            <p>Great place, wonderful atmosphere! <br><br><b>~ Bookstagram</b></p>
+            <p>Brilliant workshops, I learnd so many things <br><br><b>~ Bookbloger</b></p>
+            <p>I could stay there forever! <br><br><b>~ Fan#1</b></p>
+        </div>
+    </section>
+    <div class="contact-title">
+        <h2>Contact - send us a message</h2>
+    </div>
+    <div class="contact-container">
+        <form>
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname"><b>First name</b></label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Last name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="message">Message</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="message" name="message" placeholder="Write us a message..." style="height: 200px;"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <button class="submit-btn" href="#">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+    <div class="map-container">
+        <h2 class="map-title">Find us on Google Maps</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31901.634356559796!2d-157.56587662593913!3d1.865242863204221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a029aefef2130e9%3A0xa3345a2c29e80334!2sPoland%2C%20Kiribati!5e0!3m2!1spl!2spl!4v1684796496481!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</body>
+</html>
